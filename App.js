@@ -14,11 +14,13 @@ import { styles } from './src/styles/styles';
 import { Provider } from 'react-redux';
 import signInReducer from './src/redux/reducers/signInReducer';
 
+// Redux Store --> createStore is deprecated hence using legacy_createStore for now
+// Read docs and implementation for more details
 import {legacy_createStore as createStore} from 'redux';
 const store = createStore(signInReducer);
 
 const App = () => {
-  
+
   return (
       <Provider store={store}>
         <StackNavigator 
