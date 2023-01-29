@@ -12,12 +12,11 @@ import { styles } from './src/styles/styles';
 
 // Redux 
 import { Provider } from 'react-redux';
-import signInReducer from './src/redux/reducers/signInReducer';
-
+import rootReducer from './src/redux/reducers/rootReducer';
 // Redux Store --> createStore is deprecated hence using legacy_createStore for now
 // Read docs and implementation for more details
 import {legacy_createStore as createStore} from 'redux';
-const store = createStore(signInReducer);
+const store = createStore(rootReducer);
 
 const App = () => {
 

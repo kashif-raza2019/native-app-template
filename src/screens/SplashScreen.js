@@ -5,19 +5,21 @@ import { useNavigation } from '@react-navigation/native'
 
 
 
-const SplashScreen = () => {
+const SplashScreen = (props) => {
     const navigation = useNavigation();
     useEffect(() => {
         setTimeout(() => {
-            navigation.navigate('Home')
-            // console.log('SplashScreen')
+            // Check if user is logged in or not and navigate accordingly
+            navigation.navigate('Home') || navigation.navigate('Login')
         }, 2000)
     })
     return (
         <View
             style={styles.splashscreen}
         >
-            <Text>Splash Screen...</Text>
+            <Text
+                style={{color: 'white'}}
+            >Splash Screen</Text>
         </View>
     )
 }

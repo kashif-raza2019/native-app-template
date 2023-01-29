@@ -13,7 +13,7 @@ import { HOME, PROFILE } from '../../screens/screenRoutes';
 // Tab navigator
 const Tab = createBottomTabNavigator();
 
-const BottomNavigator = ({...props}) => {
+const BottomNavigator = (props) => {
 
     return (
         <Tab.Navigator
