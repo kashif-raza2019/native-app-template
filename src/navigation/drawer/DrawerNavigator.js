@@ -5,10 +5,11 @@ import BottomNavigator from '../bottom/BottomNavigator';
 import { styles } from '../../styles/styles';
 import CustomDrawerContent from './CustomDrawerContent';
 import { APP_NAME } from '../../screens/screenRoutes';
+import LoginScreen from '../../screens/LoginScreen';
 
 const Drawer = createDrawerNavigator();
 
-const DrawerNavigator = () => {
+const DrawerNavigator = (props) => {
   return (
     <Drawer.Navigator
       useLegacyImplementation
@@ -17,6 +18,7 @@ const DrawerNavigator = () => {
       drawerContent={(props) => <CustomDrawerContent {...props} /> }
     >
         <Drawer.Screen name={APP_NAME} component={BottomNavigator} />
+        {/* <Drawer.Screen name='SignIn' component={LoginScreen} /> */}
     </Drawer.Navigator>
   )
 }
